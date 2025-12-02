@@ -66,7 +66,7 @@ nav a:hover {
 
 .hero {
     min-height: 90vh;
-    background: url('../SA-15 TRABAJO/media/preseny.jpg') 
+    background: url('./media/preseny.jpg') 
                 center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -347,3 +347,4 @@ footer .social-icons i:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
