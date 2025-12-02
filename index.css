@@ -1,0 +1,349 @@
+:root {
+    --bg: #0b0c10;
+    --bg-light: #111317;
+    --white: #ffffff;
+    --gray: #cfd6df;
+    --blue: #4aa8ff;
+    --blue-glow: rgba(74,168,255,0.6);
+    --transition: .3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--gray);
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1rem 6%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1a1a1a;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    height: 60px;
+    filter: invert(100%);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: var(--white);
+    font-weight: 900;
+}
+
+.logo h1 span {
+    color: var(--blue);
+}
+
+nav a {
+    color: var(--gray);
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+.hero {
+    min-height: 90vh;
+    background: url('../SA-15 TRABAJO/media/preseny.jpg') 
+                center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h2 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: var(--blue);
+    color: var(--white);
+    padding: .9rem 2.5rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--blue-glow);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--blue-glow);
+}
+
+.seccion {
+    text-align: center;
+    padding: 6rem 5%;
+}
+
+.seccion h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.descripcion {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    color: var(--gray);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.extra-info {
+    background: var(--bg-light);
+    padding: 4rem 5%;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(74,168,255,0.2);
+    color: var(--gray);
+}
+
+.extra-info h3 {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.extra-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+    transition: var(--transition);
+    border: 1px solid #1a1a1a;
+}
+
+.galeria img:hover {
+    transform: scale(1.04);
+    border-color: var(--blue);
+}
+
+.tarjetas {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--bg-light);
+    width: 330px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid #1d1f24;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: var(--blue);
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.card p {
+    padding: 0 1rem 1.5rem;
+}
+
+.card button {
+    background: var(--blue);
+    border: none;
+    padding: .7rem 1.8rem;
+    border-radius: 6px;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 0 12px rgba(74,168,255,0.4);
+}
+
+.card button:hover {
+    transform: scale(1.06);
+    background: #66b8ff;
+    box-shadow: 0 0 18px rgba(74,168,255,0.7);
+}
+
+.contacto {
+    background: #0f1114;
+    padding: 6rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto h2 {
+    color: var(--white);
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.contacto p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 650px;
+    background: #121418;
+    padding: 2.7rem;
+    border-radius: 15px;
+    border: 1px solid #1b1d22;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.input-group label {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    background: #0b0d10;
+    margin-top: 0.4rem;
+    border: 1px solid #1b1d22;
+    color: white;
+    padding: .9rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 12px rgba(74,168,255,0.7);
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    background: var(--blue);
+    box-shadow: 0 0 15px rgba(74,168,255,0.5);
+}
+
+.contact-form .btn:hover {
+    background: #66b8ff;
+}
+
+footer {
+    background: #0b0c10;
+    padding: 2.5rem 5%;
+    margin-top: 4rem;
+    color: var(--gray);
+    text-align: center;
+    border-top: 1px solid #1b1d22;
+}
+
+footer p {
+    margin-bottom: 0.8rem;
+}
+
+footer .footer-links {
+    margin-top: 1rem;
+}
+
+footer .footer-links a {
+    color: var(--blue);
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+footer .footer-links a:hover {
+    color: #7bc7ff;
+}
+
+footer .social-icons {
+    margin-top: 1.5rem;
+}
+
+footer .social-icons i {
+    font-size: 1.6rem;
+    margin: 0 .7rem;
+    color: var(--gray);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+footer .social-icons i:hover {
+    color: var(--blue);
+    transform: scale(1.15);
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 1s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

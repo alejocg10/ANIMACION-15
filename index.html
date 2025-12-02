@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BM3 SPORT - Motos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+    <header class="header fade">
+        <div class="logo">
+            <img src="./media/1.png" alt="Logo BM3 SPORT" />
+            <h1>BM3 <span>SPORT</span></h1>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#galeria">Galería</a>
+            <a href="#modelos">Modelos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero fade">
+        <div class="hero-text">
+            <h2>Motos de Alto Rendimiento</h2>
+            <p>Ingeniería, potencia y diseño para quienes buscan más que velocidad.</p>
+            <a href="#galeria" class="btn">Explorar</a>
+        </div>
+    </section>
+
+    <section class="extra-info fade">
+        <div class="container">
+            <h3>¿Por qué elegir BM3 SPORT?</h3>
+            <p>En BM3 SPORT, no solo vendemos motos; ofrecemos experiencias únicas de velocidad y adrenalina. Nuestro compromiso es brindarte máquinas de alta tecnología, rendimiento y un diseño que destaca en cada ruta.</p>
+        </div>
+    </section>
+
+    <section id="galeria" class="seccion fade">
+        <h2>Galería</h2>
+        <p class="descripcion">Descubre algunos de nuestros modelos más impactantes en acción.</p>
+        <div class="galeria">
+            <img src="./media/2.gif" alt="Moto en acción 1" class="fade"/>
+            <img src="./media/3.gif" alt="Moto en acción 2" class="fade"/>
+            <img src="./media/4.gif" alt="Moto en acción 3" class="fade"/>
+        </div>
+    </section>
+
+    <section class="extra-info fade">
+        <div class="container">
+            <h3>Tecnología y Diseño</h3>
+            <p>Nuestras motos están equipadas con la última tecnología para ofrecer máxima seguridad, eficiencia y comodidad. Diseñadas para los amantes del motociclismo que exigen lo mejor.</p>
+        </div>
+    </section>
+
+    <section id="modelos" class="seccion fade">
+        <h2>Modelos Destacados</h2>
+        <div class="tarjetas">
+            <div class="card fade">
+                <img src="https://motosdavest.com/wp-content/uploads/2023/05/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240829130541-300x300.png" alt="Deportivas" />
+                <h3>Deportivas</h3>
+                <p>Rendimiento extremo y máxima aceleración.</p>
+                <button>Detalles</button>
+            </div>
+
+            <div class="card fade">
+                <img src="https://www.domeinvehiculos.com/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-02-at-10.34.41-PM-4.jpeg" alt="Cruiser" />
+                <h3>Cruiser</h3>
+                <p>Comodidad premium para viajes largos.</p>
+                <button>Ver más</button>
+            </div>
+
+            <div class="card fade">
+                <img src="https://media.revistagq.com/photos/5ff4535d08989a3c40eb74e0/master/w_1600%2Cc_limit/Aprilia%2520RS%2520660.jpg" alt="Motocross" />
+                <h3>Motocross</h3>
+                <p>Diseñadas para dominar cualquier terreno.</p>
+                <button>Explorar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto fade">
+        <h2>Contacto</h2>
+        <p>Déjanos tu mensaje y te responderemos lo antes posible.</p>
+        <form class="contact-form fade">
+            <div class="input-group">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Tu nombre" />
+            </div>
+
+            <div class="input-group">
+                <label for="correo">Correo</label>
+                <input id="correo" type="email" placeholder="correo@ejemplo.com" />
+            </div>
+
+            <div class="input-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="fade">
+        <p>BM3 SPORT © 2025 — Pasión por las Motos</p>
+        <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#galeria">Galería</a>
+            <a href="#modelos">Modelos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f" title="Facebook"></i>
+            <i class="fab fa-instagram" title="Instagram"></i>
+            <i class="fab fa-youtube" title="YouTube"></i>
+        </div>
+    </footer>
+
+    <script>
+        const elements = document.querySelectorAll('.fade');
+
+        function showOnScroll() {
+            const trigger = window.innerHeight * 0.85;
+            elements.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < trigger) el.classList.add('visible');
+            });
+        }
+
+        window.addEventListener('scroll', showOnScroll);
+        window.addEventListener('load', showOnScroll);
+    </script>
+
+</body>
+</html>
